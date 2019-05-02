@@ -77,8 +77,8 @@ To save users information
 
 ### Associations
 
-- belong_to users
-- belong_to groups
+- belong_to user
+- belong_to group
 
 *These Association will be created automatically on _group_members.rb_ according to _references_ type.
 
