@@ -27,10 +27,12 @@ This is a chat application including the following functions:
 
 ### To save chat messages
 
-|Column  |Type    |Options                       |
-|:------:|:------:|------------------------------|
-|body    |string  | -                            |
-|image   |string  | -                            |
+|Column  |Type       |Options                       |
+|:------:|:---------:|------------------------------|
+|body    |string     | -                            |
+|image   |string     | -                            |
+|user_id |references |null: false, foreign_key: true|
+|group_id|references |null: false, foreign_key: true|
 
 ### Associations
 
