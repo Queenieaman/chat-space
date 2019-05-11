@@ -1,0 +1,9 @@
+@mixin gray-part {
+  color:  #999999;
+  font-size: 12px;
+}
+
+@mixin border {
+  border-bottom: solid thin; 
+  border-color: #eeeeee;
+}
