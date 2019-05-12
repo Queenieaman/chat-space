@@ -23,12 +23,12 @@
       cursor: $cursor;
 
       &__new-group{
-        .fas.fa-edit.fa-fw{
+        .fa.fa-pencil-square-o.fa-fw{
           color: white
         }
       }
       &__edit-user{
-       .fas.fa-cog.fa-fw{
+       .fa.fa-cog.fa-fw{
         color: white
        }
       }
