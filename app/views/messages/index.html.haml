@@ -12,16 +12,7 @@
           = link_to "http://www.google.com" do
             %i.fas.fa-cog.fa-fw
     .groups
-      .group
-        %p.group__group-name Sample group name
-        %p.group__latest-message Sample message
-      .group
-        %p.group__group-name Sample group name
-        %p.group__latest-message Sample message
-      .group
-        %p.group__group-name Sample group name
-        %p.group__latest-message Sample message
-                                                                              
+      = render partial: "group"                                                                       
   .main-content
     .main-header
       .current-group
@@ -35,30 +26,14 @@
           .main-header__edit-btn Edit
 
     .messages
-      .message
-        .upper-info
-          %p.upper-info__user Member 1
-          %p.upper-info__date 2019/05/01(Wed) 00:00:00
-        .lower-info
-          %p.lower-info__text Coming to REIWA
-      .message
-        .upper-info
-          %p.upper-info__user Member 1
-          %p.upper-info__date 2019/05/01(Wed) 00:00:00
-        .lower-info
-          %p.lower-info__text Coming to REIWA
-      .message
-        .upper-info
-          %p.upper-info__user Member 1
-          %p.upper-info__date 2019/05/01(Wed) 00:00:00
-        .lower-info
-          %p.lower-info__text Coming to REIWA
-                                                                  
+      = render partial: "message"    
+            
     .form
-      %form.new-message{:method => "post"}
+      %form.new-message{ method: "post" }
       .input-box
-        %input.input-box__text{:type => "text", :placeholder => "type a message"}
-        %label.input-box__image{for:"message_image"}
+        %input.input-box__text{ type: "text", placeholder: "type a message" }
+        %label.input-box__image{ for:"message_image" }
           %i.far.fa-image
-          %input.input-box__image__file{:type => "file", :id => "message_image"}
-      %input.submit-btn__image{:type => "submit", :value => "Send"}
+          %input.input-box__image__file{ type: "file", id: "message_image" }
+      %input.submit-btn__image{ type: "submit", value: "Send" }
+      
