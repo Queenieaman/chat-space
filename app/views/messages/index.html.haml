@@ -1,0 +1,39 @@
+.flash-box
+.contents
+  .side-bar
+    .side-header
+      %p.side-header__user-name Sample name
+      %ul.user-menu
+        %li.user-menu__new-group
+          = link_to "http://www.google.com" do
+            %i.fa.fa-pencil-square-o.fa-fw
+            
+        %li.user-menu__edit-user
+          = link_to "http://www.google.com" do
+            %i.fa.fa-cog.fa-fw
+    .groups
+      = render partial: "group"                                               
+  .main-content
+    .main-header
+      .current-group
+        %p.current-group__name Sample group
+        %ul.member-list
+          Member：
+          %li.member-list__member Member 1
+          %li.member-list__member Member 2
+      .main-header__edit-box
+        = link_to "http://www.google.com" do
+          .main-header__edit-btn Edit
+
+    .messages
+      = render partial: "message"    
+            
+    .form
+      %form.new-message{ method: "post" }
+      .input-box
+        %input.input-box__text{ type: "text", placeholder: "type a message" }
+        %label.input-box__image{ for:"message_image" }
+          %i.fa.fa-image
+          %input.input-box__image__file{ type: "file", id: "message_image" }
+      %input.submit-btn__image{ type: "submit", value: "Send" }
+  

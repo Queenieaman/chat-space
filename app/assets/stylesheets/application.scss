@@ -1,1 +1,15 @@
+/*
+ *= require font-awesome
+ */
+
 @import "./reset";
+
+@import "variables"; 
+
+@import "font-awesome"; 
+
+@import "mixin";
+
+@import "side_bar"; 
+
+@import "main_content" ;
