@@ -55,6 +55,10 @@ fieldset,
 img {
   border:0;
 }
+
+a{
+  text-decoration: none;
+} 
 /*
   TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
 */
