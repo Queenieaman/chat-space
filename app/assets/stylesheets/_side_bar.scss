@@ -1,11 +1,11 @@
 .side-bar {
   width: 300px;
-  color: white;
+  color: $white;
   float: left;
   font-weight: bold;
 
   .side-header {
-    background-color: #253141;
+    background-color: $side_blue_dark;
     height: 100px;
     width: 100%;
     padding: 0 20px;
@@ -24,18 +24,18 @@
 
       &__new-group{
         .fa.fa-pencil-square-o.fa-fw{
-          color: white
+          color: $white
         }
       }
       &__edit-user{
        .fa.fa-cog.fa-fw{
-        color: white
+        color: $white
        }
       }
     }
   }
   .groups{
-    background-color: #2f3e51;
+    background-color: $side_blue_light;
     height: calc(100vh - 100px);
     width: 100%;
     padding: 20px 20px 0;

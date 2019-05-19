@@ -29,14 +29,11 @@
         line-height: 40px;
         padding: 0 20px;
         margin-top: 28px;
-        color: $btn-color;
-        border-color:$btn-color;
+        color: $light_blue;
+        border-color:$light_blue;
         border: solid thin; 
         cursor: pointer;
       }
-      & a{
-        text-decoration: none;
-      } 
     }
   } 
 
@@ -57,7 +54,7 @@
         &__user{
           font-size: 16px;
           font-weight: bold;
-          color: #434A54;
+          color: $black;
         }
         &__date{
           margin-left: 10px;
@@ -67,7 +64,7 @@
       .lower-info{
         &__text{
           font-size: 14px;
-          color: #434A54;
+          color: $black;
           margin-bottom: 10px;
         }  
       }
@@ -113,8 +110,8 @@
       height: 50px;
       padding: 0 30px;
       margin-left: 15px;
-      background-color: $btn-color;
-      color: white;
+      background-color: $light_blue;
+      color: $white;
       cursor: $cursor;
     }
   }
