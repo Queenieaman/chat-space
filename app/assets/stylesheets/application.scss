@@ -10,12 +10,12 @@
 
 @import "mixin";
 
-@import "side_bar"; 
+@import "modules/side_bar"; 
 
-@import "main_content" ;
+@import "main_content";
 
-@import "user";
+@import "modules/user";
 
-@import "flash";
+@import "modules/flash";
 
 @import "modules/group";
