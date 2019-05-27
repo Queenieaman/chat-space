@@ -41,17 +41,20 @@
     padding: 20px 20px 0;
     box-sizing: border-box;
     overflow: scroll;
+    
     .group{
       margin-bottom: 40px;
       cursor: pointer;
       
-      &__group-name{
-      margin-bottom: 5px;
-      font-size: 15px;
+      &__name{
+        margin-bottom: 5px;
+        font-size: 15px;
+        color: white;
       }
 
-      &__latest-message{
+      &__message{
         font-size: 11px;
+        color:white;
       } 
     }   
   } 

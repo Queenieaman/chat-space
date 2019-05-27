@@ -1,4 +1,8 @@
 ja:
+  activerecord:
+    attributes:
+      group:
+        name: グループ名
   devise:
     confirmations:
       confirmed: "アカウントが確認されました。ログインしています。"
