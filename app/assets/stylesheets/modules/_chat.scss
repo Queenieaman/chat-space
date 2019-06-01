@@ -1,3 +1,7 @@
+a {  
+  color: $light_blue;
+}
+
 .main-content{
   float: left;
   width: calc(100vw - 300px);
@@ -25,14 +29,15 @@
     
     &__edit-box{
       .main-header__edit-btn{
+        color: $light_blue;
+        text-decoration: none;
         height: 40px;
         line-height: 40px;
         padding: 0 20px;
         margin-top: 28px;
-        color: $light_blue;
-        border-color:$light_blue;
         border: solid thin; 
         cursor: pointer;
+      
       }
     }
   } 
