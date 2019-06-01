@@ -1,0 +1,54 @@
+.form{
+  width: calc(100vw - 300px);
+  height: 90px;
+  padding: 20px 40px;
+  // position: fixed;
+  background-color: #dddddd;
+  box-sizing: border-box;    
+  form{
+    width: 100%;
+    height: 50px;
+    display: flex;
+   
+    .input-box{      
+      width: 100%;
+      position:relative;
+      box-sizing: border-box;
+
+      &__text{
+        input{
+          padding:0 40px 0 10px;
+          color:#434a54;
+          width:100%;
+          height: 50px;
+          border:none;
+          box-sizing: border-box;
+        }
+      }
+      &__image{
+        position: absolute; 
+        font-size: 1.3em;
+        padding:0 10px;
+        top:15px;
+        right:10px;
+        cursor: $cursor;
+        display: flex;
+      }
+  }  
+}
+      
+    .submit-btn__image{
+      margin-left: 15px;
+      padding: 0 30px;
+      width:100px;
+      height: 50px;
+      background-color: $light_blue;
+      color: $white;
+      cursor: $cursor;
+      display: inline-block;     /* インラインブロック化 */
+      .file{
+          display: none;
+      }
+    }
+}
+
