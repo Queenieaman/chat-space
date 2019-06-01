@@ -15,7 +15,7 @@
       position:relative;
       box-sizing: border-box;
 
-      .input-box__text{
+      &__text{
         input{
           padding:0 40px 0 10px;
           color:#434a54;
@@ -25,7 +25,7 @@
           box-sizing: border-box;
         }
       }
-      .input-box__image{
+      &__image{
         position: absolute; 
         font-size: 1.3em;
         padding:0 10px;
