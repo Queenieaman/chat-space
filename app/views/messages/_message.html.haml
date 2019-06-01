@@ -1,7 +1,11 @@
 .message
   .upper-info
-    %p.upper-info__user Member 1
-    %p.upper-info__date 2019/05/01(Wed) 00:00:00
+    .upper-info__user
+      = message.user.name
+    .upper-info__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
   .lower-info
-    %p.lower-info__text Came to REIWA
-
+    - if message.content.present?
+      %p.lower-info__text
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
