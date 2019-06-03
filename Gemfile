@@ -37,12 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-    gem 'byebug', platform: :mri
-    gem 'pry-rails' #using binding.pry 
-    gem 'rspec-rails', '~> 3.5' # for Rspec
-    gem 'rails-controller-testing' #test controll
-    gem 'factory_bot_rails' #create Dammy instanse
-    gem 'faker'# create damy data
+  gem 'byebug', platform: :mri
 end
 
 group :development do
