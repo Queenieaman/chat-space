@@ -37,9 +37,9 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data); //非同期でメッセージを追加した
       $('.messages').append(html); //実際に追加
-      $('#message_content').val(''); //テキストフィールドを空に
       $('.messages').removeAttr('disable') //SENDを押した際の一時停止（Disable）を削除
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight}, 'normal'); //スクロールを自動化
+      $('.new_message')[0].reset(); //テキストフィールドを空に
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
