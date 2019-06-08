@@ -3,7 +3,7 @@
     .upper-info__user
       = message.user.name
     .upper-info__date
-      = message.created_at.strftime("%Y/%m/%d %H:%M")
+      = message.created_at.strftime("%Y/%m/%d(%a) %H:%M")
   .lower-info
     - if message.content.present?
       %p.lower-info__text
