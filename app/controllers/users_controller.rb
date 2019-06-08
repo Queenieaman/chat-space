@@ -20,6 +20,15 @@ class UsersController < ApplicationController
       render :new
     end
   end
+
+  def index
+    #paramsとして送られてきたkeyword（入力された語句）で、Userモデルのnameカラムを検索し、その結果を@usersに代入する
+    @users = User.where('user LIKE(?)', "%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
   
   def user_params
     params.require(:user).permit(:name, :email)
