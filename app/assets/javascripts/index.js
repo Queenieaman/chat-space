@@ -47,7 +47,7 @@ $(function(){
           })
         }
         else {
-          appendErrMsgToHTML("一致するユーザーが見つかりません") //ユーザーがいない場合
+          appendErrMsgToHTML(`一致するユーザーが見つかりません`) //ユーザーがいない場合
         }
       })
       .fail(function() {
