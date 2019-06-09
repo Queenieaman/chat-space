@@ -1,4 +1,5 @@
 $(function(){
+  // HTMLの表示の設定
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img class="message-text__image" src= ${ message.image }>` : "";
@@ -21,7 +22,8 @@ $(function(){
   return html;
   }
   $('#new_message').on('submit', function(e){
-    e.preventDefault(); // ここでフォームのsubmitイベントを中止。
+    // ここでフォームのsubmitイベントを中止。
+    e.preventDefault(); 
     var message = new FormData(this); // formdataオブジェクトとして、フォームに入力した値を取得
     // 以下のコードでformdataの中身を確認できる（らしい）
     // for(item of formdata) console.log(item);
@@ -40,6 +42,7 @@ $(function(){
       $('.messages').removeAttr('disable') //SENDを押した際の一時停止（Disable）を削除
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight}, 'normal'); //スクロールを自動化
       $('.new_message')[0].reset(); //テキストフィールドを空に
+      window.location.reload();
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
