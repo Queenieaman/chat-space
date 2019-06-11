@@ -51,4 +51,29 @@ $(function(){
       $('.submit-btn__image').prop('disabled', false); //SENDを押した時のDisabledを削除
     })
   })
-})
+
+  var reloadMessages = function(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){ //今いるページのリンクが/groups/グループID/messagesのパスとマッチすれば以下を実行。
+      var last_message_id = $('.message').last().data('id')  //dataメソッドで.messageにある:last最後のカスタムデータ属性を取得しlast_message_idに代入。
+      var url = "api/messages"
+      $.ajax({
+          url: url,         //ルーティングで設定した通りのURLを指定
+          type: 'get',      //ルーティングで設定した通りhttpメソッドをgetに指定
+          dataType: 'json', //dataオプションでリクエストに値を含める
+          data: { id: last_message_id }
+      })
+      .done(function(messages) {
+        var insertHTML = ''; //追加するHTMLの入れ物を作る
+        messages.forEach(function(message) {       //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
+          insertHTML = buildHTML(message); //メッセージが入ったHTMLを取得
+          $('.messages').append(insertHTML) //メッセージを追加
+      })
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+    })
+      .fail(function() {
+        alert('自動更新に失敗しました');
+      });
+    }
+  };
+  setInterval(reloadMessages, 5000);
+});
