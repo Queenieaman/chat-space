@@ -1,4 +1,4 @@
-.message
+.message{ data: { id: 'message.id' } }
   .upper-info
     .upper-info__user
       = message.user.name
@@ -9,3 +9,6 @@
       %p.lower-info__text
         = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+
+-# HTML/HAMLのタグ内に[data- 任意の名前 = 任意の値 ] とするとjavascriptから値を引っ張ってこれる。HTMLだとdate-message_id: (#message.id) となる？
