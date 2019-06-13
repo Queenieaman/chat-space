@@ -83,7 +83,7 @@ gem 'erb2haml'
 
 gem 'font-awesome-rails'
 
-gem 'font-awesome-sass', '5.8.1'
+# gem 'font-awesome-sass', '5.8.1'
 
 #日本語化
 gem 'rails-i18n'
