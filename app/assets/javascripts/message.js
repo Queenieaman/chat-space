@@ -42,7 +42,6 @@ $(function(){
       $('.messages').removeAttr('disable') //SENDを押した際の一時停止（Disable）を削除
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight}, 'normal'); //スクロールを自動化
       $('.new_message')[0].reset(); //テキストフィールドを空に
-      window.location.reload();
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');

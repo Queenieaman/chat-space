@@ -71,10 +71,10 @@ end
 #      gem 'rspec'
 # end
 
-# #本番環境にのみ必要
-# group :production do 
-#      gem 'unicorn'
-# end
+#本番環境にのみ必要
+group :production do
+  gem 'unicorn', '5.4.1'
+end
 
 
 gem 'haml-rails'
