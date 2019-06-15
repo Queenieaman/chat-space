@@ -59,3 +59,6 @@
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+server '3.112.156.243',  #サーバーホスト名
+  user: 'ec2-user',   #AWSサーバーへのログインユーザー名
+  roles: %w{app db web} #サーバーロール
