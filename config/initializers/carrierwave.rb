@@ -13,5 +13,5 @@ CarrierWave.configure do |config|
   }
 
   config.fog_directory  = 'yuima-upload-test'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/bucket'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/yuima-upload-test'
 end
