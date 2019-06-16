@@ -96,3 +96,5 @@ gem 'rails-i18n'
 gem 'carrierwave'
 
 gem 'mini_magick'
+
+gem 'fog-aws' #AWSのサービスのみを利用する場合使用
