@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :basic_auth, if: :production? #if: :production?と記述することによって、本番環境のみでbasic_authメソッドが実行される
+  before_action :basic_auth, if: :production? # ”if: :production?”と記述することによって、本番環境のみでbasic_authメソッドが実行される
   protect_from_forgery with: :exception
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   
   private
 
-  #production?というメソッドを定義し、現在の環境が本番環境ならtrue、そうでないならfalseを返す
+  # production?というメソッドを定義し、現在の環境が本番環境ならtrue、そうでないならfalseを返す
   def production?
     Rails.env.production?
   end

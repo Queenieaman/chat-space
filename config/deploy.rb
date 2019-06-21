@@ -36,7 +36,7 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 
-#ローカル環境にあるconfig/secrets.ymlを本番環境のshared/config/secrets.ymlに反映するための設定を行う→.gitignoreに記載されているsecrets.ymlを、Githubを経由せずにデプロイすることができる
+# ローカル環境にあるconfig/secrets.ymlを本番環境のshared/config/secrets.ymlに反映するための設定を行う→.gitignoreに記載されているsecrets.ymlを、Githubを経由せずにデプロイすることができる
   desc 'upload secrets.yml'
   task :upload do
     on roles(:app) do |host|
