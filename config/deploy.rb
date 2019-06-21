@@ -20,7 +20,9 @@ set :default_env, {
   rbenv_root: "/usr/local/rbenv",
   path: "/usr/local/rbenv/shims:/usr/local/rbenv/bin:$PATH",
   AWS_ACCESS_KEY_ID: ENV["AWS_ACCESS_KEY_ID"],
-  AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"]
+  AWS_SECRET_ACCESS_KEY: ENV["AWS_SECRET_ACCESS_KEY"],
+  BASIC_AUTH_USER: ENV["BASIC_AUTH_USER"],
+  BASIC_AUTH_PASSWORD: ENV["BASIC_AUTH_PASSWORD"]
 }
 
 # secrets.yml用のシンボリックリンクを追加
@@ -34,7 +36,7 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 
-#ローカル環境にあるconfig/secrets.ymlを本番環境のshared/config/secrets.ymlに反映するための設定を行う→.gitignoreに記載されているsecrets.ymlを、Githubを経由せずにデプロイすることができる
+# ローカル環境にあるconfig/secrets.ymlを本番環境のshared/config/secrets.ymlに反映するための設定を行う→.gitignoreに記載されているsecrets.ymlを、Githubを経由せずにデプロイすることができる
   desc 'upload secrets.yml'
   task :upload do
     on roles(:app) do |host|
