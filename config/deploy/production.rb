@@ -62,3 +62,7 @@
 server '3.112.156.243',  #サーバーホスト名
   user: 'ec2-user',   #AWSサーバーへのログインユーザー名
   roles: %w{app db web} #サーバーロール
+
+#本番環境のみでBasic認証
+set :rails_env, "production"
+set :unicorn_rack_env, "production"
