@@ -1,0 +1,31 @@
+inherit_from: .rubocop_todo.yml # bundle exec rubocop --auto-gen-configを実施したことで生成されるもの.rubocop.ymlに.rubocop.todo.ymlの内容が書かれているのと同じことにしてくれる＝もう一度rubcopeを行うと違反が無い状態になる
+
+AllCops:
+  # Rubocopの規約の調査から除外するファイルやディレクトリ（自動生成されたファイル）…ほとんど書き直しがないもの（SchemaやMigration等）をあえて見逃す
+  # デフォルト設定にある"vendor/**/*"が無効化されないように記述
+  Exclude:
+    - bin/*
+    - db/schema.rb
+    - node_modules/**/*
+    - db/migrate/*
+    - vendor/**/*
+  # Rails用にカスタマイズされた規約にてチェックを行うかを決めている。この場合trueなので、Rails向けの規約（Rails cops）でチェックを行います。"rubocop -R"と同じ
+  Rails:
+    enabled: true
+
+# これ以下は厳しすぎる規約を無効にする記述
+# "Missing top-level class documentation comment."を無効
+Style/Documentation:
+  Enabled: false
+
+# "Prefer single-quoted strings when you don't need string interpolation or special symbols."を無効
+Style/StringLiterals:
+  Enabled: false
+
+# "Line is too long"を無効
+Metrics/LineLength:
+  Enabled: false
+
+#'frozen_string_literal: true'を無効
+Style/FrozenStringLiteralComment:
+  Enabled: false
